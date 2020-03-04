@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--hierarchial definition of a character-->
+<doc>
+	<node name="root" type="freejoint">
+	<node name="spine" type="ballxyz" position="0.0 0.0 0.0" minlim="-45 -45 -45" maxlim="90 45 45">
+		<geom name="torso" type="box" scale="1.5 2.0 1.0" center="0.0 1.0 0.0" color="0.8 0.9 1.0"/>
+		<geom name="coat" type="rect"/>
+		<node name="neck" type="hinge" position="0.0 3.5 0.0" axis="1.0 0.0 0.0">
+			<geom name="neckhinge" type="box" scale="0.5 0.5 0.5" center="0.0 0.0 0.0" color="0.9 0.7 0.6"/>
+			<geom name="head" type="sphere" scale="0.8 1.0 1.0" center="0.0 1.5 0.0" color="0.9 0.7 0.6"/>
+			<geom name="hair1" type="cone" scale="1.0 1.0 1.0" center="-0.4 3.1 0.3" color="0.3 0.8 1.0" rotation="30.0"/>
+			<geom name="hair2" type="cone" scale="1.0 1.0 1.0" center="0.4 3.1 0.3" color="0.3 0.8 1.0" rotation="-30.0"/>
+			<geom name="hair3" type="cone" scale="0.8 0.8 0.8" center="-1.0 2.5 0.3" color="0.3 0.8 1.0" rotation="45.0"/>
+			<geom name="hair4" type="cone" scale="0.8 0.8 0.8" center="1.0 2.5 0.3" color="0.3 0.8 1.0" rotation="-45.0"/>
+			<geom name="hair5" type="cone" scale="0.6 0.6 0.6" center="-1.3 2.0 0.3" color="0.3 0.8 1.0" rotation="90.0"/>
+			<geom name="hair6" type="cone" scale="0.6 0.6 0.6" center="1.3 2.0 0.3" color="0.3 0.8 1.0" rotation="-90.0"/>
+			<geom name="hair7" type="cone" scale="0.5 0.5 0.5" center="-1.2 1.0 0.2" color="0.3 0.8 1.0" rotation="135.0"/>
+			<geom name="hair8" type="cone" scale="0.5 0.5 0.5" center="1.2 1.0 0.2" color="0.3 0.8 1.0" rotation="-135.0"/>
+			<geom name="eyel" type="sphere" scale="0.3 0.3 0.3" center="-0.4 1.5 1.5" color="1.0 1.0 1.0"/>
+			<geom name="eyer" type="sphere" scale="0.3 0.3 0.3" center="0.4 1.5 1.5" color="1.0 1.0 1.0"/>
+			<geom name="earl" type="sphere" scale="0.3 0.3 0.2" center="-1.2 1.3 0.2" color="0.9 0.7 0.6"/>
+			<geom name="earr" type="sphere" scale="0.3 0.3 0.2" center="1.2 1.3 0.2" color="0.9 0.7 0.6"/>
+			<geom name="eyeball1" type="sphere" scale="0.08 0.08 0.08" center="-0.4 1.5 2.0" color="0.0 0.0 0.0"/>
+			<geom name="eyeball2" type="sphere" scale="0.08 0.08 0.08" center="0.4 1.5 2.0" color="0.0 0.0 0.0"/>
+			<geom name="eyebrow" type="sphere" scale="0.6 0.08 0.08" center="0.0 2.0 1.8" color="0.3 0.8 1.0"/>
+			<geom name="nose" type="cone" scale="0.3 0.8 0.5" center="0.0 0.7 1.8" color="0.9 0.7 0.6"/>
+			<geom name="lips" type="line"/>
+		</node>
+		<node name="shoulder1" type="ballxyz" position="-1.7 3.0 0.0">
+			<geom name="shoulderl" type="sphere" scale="0.3 0.3 0.3" center="0.2 -0.5 0.0" color="1.0 1.0 1.0"/>
+			<geom name="arml" type="cylinder" scale="0.5 0.8 0.7" center="0.1 -2.1 0.0" color="1.0 1.0 1.0"/>
+			<node name="elbowleft" type="hinge" position="0.0 -2.5 0.0" axis="0 0 1">
+				<geom name="elbowballl" type="sphere" scale="0.3 0.3 0.3" center="0.0 0.0 0.0" color="1.0 1.0 1.0"/>
+				<geom name="elbowl" type="cylinder" scale="0.4 1.0 0.7" center="0.0 -1.8 0.0" color="1.0 1.0 1.0"/>
+				<node name="handleft" type="hinge" position="0.0 -2.0 0.0" axis="0 0 1">
+					<geom name="handl" type="sphere" scale="0.2 0.4 0.3" center="0.0 0.0 0.0" color="0.9 0.7 0.6"/>
+				</node>
+			</node>
+		</node>
+		<node name="shoulder2" type="ballxyz" position="1.7 3.0 0.0" minlim="-90 0 0" maxlim="90 75 180"> 
+			<geom name="shoulderr" type="sphere" scale="0.3 0.3 0.3" center="-0.2 -0.5 0.0" color="1.0 1.0 1.0"/>
+			<geom name="armr" type="cylinder" scale="0.5 0.8 0.7" center="-0.1 -2.1 0.0" color="1.0 1.0 1.0"/>
+			<node name="elbowright" type="hinge" position="0.0 -2.5 0.0" axis="0 0 1">
+				<geom name="elbowballr" type="sphere" scale="0.3 0.3 0.3" center="0.0 0.0 0.0" color="1.0 1.0 1.0"/>
+				<geom name="elbowr" type="cylinder" scale="0.4 1.0 0.7" center="0.0 -1.8 0.0" color="1.0 1.0 1.0"/>
+				<node name="handright" type="hinge" position="0.0 -2.0 0.0" axis="0 0 1">
+					<geom name="handr" type="sphere" scale="0.2 0.4 0.3" center="0.0 0.0 0.0" color="0.9 0.7 0.6"/>
+				</node>
+			</node>
+		</node>
+		</node>
+		<geom name="hip" type="box" center="0.0 -1.5 0.0" scale="1.5 0.5 1.0" color="0.4 0.2 0.0"/>
+		<node name="leg1" type="ballxyz" position="-1.0 -1.0 0.0" minlim="-90 -45 -45" maxlim="90 0 0">
+			<geom name="legl" type="box" scale="0.5 1.0 0.8" center="0.0 -2.0 0.0" color="0.4 0.2 0.0"/>
+			<geom name="kneeballl" type="sphere" scale="0.3 0.4 0.5" center="0.0 -3.0 0.0" color="0.4 0.2 0.0"/>
+			<node name="knee1" type="hinge" position="0.0 -3.5 0.0" axis="1.0 0.0 0.0">
+				<geom name="kneel" type="box" scale="0.5 1.0 0.8" center="0.0 -0.4 0.0" color="0.4 0.2 0.0"/>
+				<node name="feet1" type="hinge" position="0.0 -1.5 0.0" axis="1.0 0.0 0.0">
+					<geom name="feetl" type="sphere" scale="0.5 0.3 0.6" center="0.0 0.0 0.1" color="0.3 0.0 0.3"/>
+				</node>
+			</node>
+		</node>
+		<node name="leg2" type="ballxyz" position="1.0 -1.0 0.0" minlim="-90 0 0" maxlim="90 45 45">
+			<geom name="legr" type="box" scale="0.5 1.0 0.8" center="0.0 -2.0 0.0" color="0.4 0.2 0.0"/>
+			<geom name="kneeballr" type="sphere" scale="0.3 0.4 0.5" center="0.0 -3.0 0.0" color="0.4 0.2 0.0"/>
+			<node name="knee2" type="hinge" position="0.0 -3.5 0.0" axis="1.0 0.0 0.0">
+				<geom name="kneer" type="box" scale="0.5 1.0 0.8" center="0.0 -0.4 0.0" color="0.4 0.2 0.0"/>
+				<node name="feet2" type="hinge" position="0.0 -1.5 0.0" axis="1.0 0.0 0.0">
+					<geom name="feetr" type="sphere" scale="0.5 0.3 0.6" center="0.0 0.0 0.1" color="0.3 0.0 0.3"/>
+				</node>
+			</node>
+		</node>
+	</node>
+</doc>
