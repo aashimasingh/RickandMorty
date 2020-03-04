@@ -2,6 +2,7 @@
 
 Name: Aashima Singh
 Character: Rick (from Rick and Morty)
+![Image of Rick](https://github.com/aashimasingh/RickandMorty/Singh-Rick.png)
 
 1. BallJoint.java and HingeJoint.java create joints
 2. Body<shapename>.java are geometrical node classes
